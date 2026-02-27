@@ -1,0 +1,19 @@
+<script>
+function signup(){
+let email=document.getElementById("user").value;
+let pass=document.getElementById("pass").value;
+
+auth.createUserWithEmailAndPassword(email, pass)
+.then(()=> alert("Signup Successful"))
+.catch(err=> alert(err.message));
+}
+
+function login(){
+let email=document.getElementById("user").value;
+let pass=document.getElementById("pass").value;
+
+auth.signInWithEmailAndPassword(email, pass)
+.then(()=> window.location="dashboard.html")
+.catch(err=> alert(err.message));
+}
+</script>
